@@ -1,0 +1,7 @@
+<div class="cardInputField">
+  <small class="cardNumber">Card Number<span>&#42;</span>  </small>&nbsp;
+ <input #cardNumber [(ngModel)]="cardnum" [textMask]="mask" class="card" partitioned  type="text" pattern="[0-9]{4}" maxlength="90" (keyup)="updateCard()"> 
+  <i class="card ccs ccs-{{type?.card?.type}}"></i>
+</div>
+
+

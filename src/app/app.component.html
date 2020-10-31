@@ -1,7 +1,14 @@
-<div class="cardInputField">
-  <small class="cardNumber">Card Number<span>&#42;</span>  </small>&nbsp;
- <input #cardNumber [(ngModel)]="cardnum" [textMask]="mask" class="card" partitioned  type="text" pattern="[0-9]{4}" maxlength="90" (keyup)="updateCard()"> 
-  <i class="card ccs ccs-{{type?.card?.type}}"></i>
-</div>
-
-
+ <div class="cardInputField">
+    <small class="cardNumber">Card Number<span>&#42;</span>  </small>&nbsp;
+    <input [(ngModel)]="input1" #in1 (paste)="onPaste($event, null)" (input)="onInputEntry($event, null, in2)"
+      class="text-center col-lg-2 card" type="text" maxlength="4" pattern="[0-9]">
+    
+      <input [(ngModel)]="input2" #in2 (paste)="onPaste($event, in4)" (input)="onInputEntry($event, in1, in3)"
+      class="text-center col-lg-2 card" type="text" maxlength="4" pattern="[0-9]">
+    
+      <input [(ngModel)]="input3" #in3 (paste)="onPaste($event, in4)" (input)="onInputEntry($event, in2, in4)"
+      class="text-center col-lg-2 card" type="text" maxlength="4" pattern="[0-9]">
+   
+      <input [(ngModel)]="input4" #in4 (paste)="onPaste($event, null)" (input)="onInputEntry($event, in3, null)"
+      class="text-center col-lg-2 card" type="text" maxlength="4" pattern="[0-9]">
+  </div>

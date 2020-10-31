@@ -11,14 +11,19 @@ span{
 }
 input{
     padding: 12px;
-    /* width: 50px; */
+    width: 50px;
     margin-left: 12px;
     border: 1px solid #6fb1cc;
     border-radius: 4px;
-
 }
-
 .card{
-    font-size: 20px;
-   
+    font-size: 20px;  
 }
+.passInput {
+    text-align: center;
+    width: 20px;
+  }
+input:focus {
+    border-style: solid;
+    border-color: rgb(4, 84, 255);
+  }
